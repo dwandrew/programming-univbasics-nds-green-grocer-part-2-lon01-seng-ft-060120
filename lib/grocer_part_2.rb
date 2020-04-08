@@ -10,6 +10,7 @@ def apply_coupons(cart, coupons)
     if current_cart[:item]== current_coupon[:item] && current_cart[:count] >= current_coupon[:num];
         current_cart[:count]-= current_coupon[:num];
         cart.push(:item =>"#{current_cart[:item]} W/COUPON", :price => current_coupon[:cost]/current_coupon[:num], :clearance => current_cart[:clearance], :count => current_coupon[:num])
+    end
     coupon_index+=1
     end
   cart_index+=1;
