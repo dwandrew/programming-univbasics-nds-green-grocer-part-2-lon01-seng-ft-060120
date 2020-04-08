@@ -2,8 +2,9 @@ require_relative './part_1_solution.rb'
 require 'pp'
 def apply_coupons(cart, coupons)
   cart_index=0
+  
+  while cart_index<cart.length;
   coupon_index = 0
-  while cart_index<cart.length; 
     while coupon_index<coupons.length
     current_cart = cart[cart_index];
     current_coupon = coupons[coupon_index]
