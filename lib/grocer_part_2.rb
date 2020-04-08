@@ -1,8 +1,19 @@
 require_relative './part_1_solution.rb'
 require 'pp'
 def apply_coupons(cart, coupons)
-  pp cart
-  pp coupons
+  cart_index=0
+  coupon_index = 0
+  while cart_index<cart.length; 
+    while coupon_index<coupons.length
+    current_cart = cart[cart_index];
+    current_coupon = coupons[coupon_index]
+    if current_cart[:item]== current_coupon[:item] && current_cart[:count] >= current_coupon[:num];
+        current_cart[:count]-= current_coupon[:num];
+        cart.push(:item =>"#{current_cart[:item]} W/COUPON", :price => current_coupon[:cost]/current_coupon[:num], :clearance => current_cart[:clearance], :count => current_coupon[:num])
+    coupon_index+=1
+    end
+  cart_index+=1;
+  end
 end
 
 def apply_clearance(cart)
