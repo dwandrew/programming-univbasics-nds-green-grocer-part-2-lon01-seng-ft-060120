@@ -34,7 +34,11 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
-  # Consult README for inputs and outputs
+  
+end
+
+
+# Consult README for inputs and outputs
   #
   # This method should call
   # * consolidate_cart
@@ -43,4 +47,3 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
-end
