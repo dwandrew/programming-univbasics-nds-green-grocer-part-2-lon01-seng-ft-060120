@@ -46,7 +46,7 @@ def checkout(cart, coupons)
   if total>= 100;
     total*=0.9
   end
-  total.ceil(2)
+  total.floor(2)
 end
 
 
